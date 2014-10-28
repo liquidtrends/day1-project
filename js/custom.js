@@ -4,11 +4,14 @@ $(document).ready(function(){
 
 $(function(){
 	
-	// Show Employee Input //
+	// Employee Counter //
+	var employeeCount = 0;
 
+	// Show Employee Input //
 	$("#add-employee").click(function() {
 		$( "#employeeInput" ).show();
 		$( "#add-employee" ).hide();
+		$( ".hints" ).slideUp(400);
 	});
 
 	// Employee Input //
@@ -21,10 +24,26 @@ $(function(){
 		if (newItem !== "") {
 			$("ul#employee-list").append($("<li>").text(newItem).addClass("employee-box"));
 			$this.val('');
-			
-			// Draggable Employee Box //
-			$( "#employee-list" ).children().draggable();
-			$( "#droppable" ).droppable(); 
+
+	// Count how many employees are added //	
+			if (newItem !== "") {
+				$('#displayCount').html(++employeeCount);
+				//alert (++employeeCount);
+			};		
+		
+	// Draggable Employee Box //
+			$( "#employee-list" ).children().draggable({
+				snap: '#droppable',
+				snapMode: 'top',
+				grid: [ 20, 20 ],
+			});
+			$( "#droppable" ).droppable({
+        		accept: '#employee-list', 
+        		drop: function(event, ui) 
+        	{
+            	$(this).find("#employee-list").html();
+        	}
+			}); 
 		  }
 		}
 
@@ -80,7 +99,13 @@ $(function(){
 		}
 	});
 
-	
+	// Reset All //
+	$("reset").click(function() {
+    $("#employee-list").css({
+        'left': $("#employee-list:nth-child").data('originalLeft'),
+        'top': $("#employee-list:nth-child").data('origionalTop')
+    });
+});	
 
 });
 

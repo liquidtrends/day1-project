@@ -110,6 +110,9 @@ body {
 /* header */
 
 .hints {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: none;
     background: black;
     height: 80px;
@@ -129,6 +132,14 @@ body {
     text-align: center;
 }
 
+.board-container {
+    margin-top: 120px;
+}
+
+.white {
+    color: white;
+}
+
 /* Resource Input */
 
 .resource-input {
@@ -141,13 +152,6 @@ body {
     display: none;
 }
 
-.resource-container {
-    margin-top: 20px;
-    padding: 20px;
-    background: rgba(0,0,0,0.3);
-    text-align: center;
-}
-
 .resource-container h3 {
     margin-top: 0;
 }
@@ -157,26 +161,26 @@ body {
     padding: 10px;
     height: 500px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .employee-box {
     list-style: none;
-    margin-left: -35px;
+    margin-top: 10px;
+    margin-left: -10px;
     padding: 10px;
     background: #ededed;
     border-radius: 8px;
     margin-bottom: 10px;
-    margin-top: 10px;
+    z-index: 99;
+    width: 90%;
+    text-align: center;
 }
 
 .employee-box:active {
     -webkit-box-shadow: 4px 10px 5px 0px rgba(0,0,0,0.3);
     -moz-box-shadow: 4px 10px 5px 0px rgba(0,0,0,0.3);
     box-shadow: 4px 10px 5px 0px rgba(0,0,0,0.3);
-}
-
-.employee-list {
-    z-index: 9999;
 }
 
 .red {

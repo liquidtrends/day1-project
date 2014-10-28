@@ -28,7 +28,7 @@
             <span class="step2">Step 2: Add an Employee</span>
         </div>
 
-        <div class="container">
+        <div class="container board-container">
 
             <!-- Start Row -->
             <div class="row employees">
@@ -36,13 +36,10 @@
                 <div class="col-md-3">
     	            <div class="employee-column">
                         <h3 class"employee-title">Employees</h3>
-                        <i class="fa fa-plus-circle" id="add-employee">Add Employee</i>
-                        <input class="employee" id="employeeInput" name="employeeName" placeholder="Employee name">	        
+                        <center><button type="button" class="btn btn-success" id="add-employee">Add Employee</button></center>
+                        <center><input class="employee" id="employeeInput" name="employeeName" placeholder="Employee name"></center>        
     		        	<ul id="employee-list"><!-- Show List --></ul>
-
-    	        		<!--<button type="button" id="random">Randomize</button>
-    		        	<div id="selected-random">
-                        </div>-->
+                        <!--<button id="reset">Reset</button>-->
                     </div>
                 </div>
                 <!-- End Employee Column -->
@@ -51,14 +48,12 @@
                 <div class="col-md-9">
                     <div class="row">
                     <div class="col-md-4">
-                        <div class="task-column">
+                        <div class="task-column" id="droppable">
                             <span class="task-input1">
                                 <i class="fa fa-plus-circle"></i>
                                 <input class="task" id="taskInput1" name="taskName" placeholder="Task">
                             </span>
                             <div id="task-list1"><!-- Show List --></div>
-                            
-                            <div id="droppable" class="dotted-task sortable"></div>
                         </div>
                     </div>
 
@@ -91,6 +86,12 @@
 		        
 	        </div>
             <!-- End Row -->
+
+            <div class="row">
+            <div class="col-md-6">
+                <span><h4 class="white">Employees Added:</h4> <h2 class="white" id="displayCount"></h2></span>
+            </div>
+            </div>
 	    </div>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
