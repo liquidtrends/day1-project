@@ -29,49 +29,58 @@
             <!-- Start Row -->
             <div class="row employees">
                 <!-- Employee Column -->
-	            <div class="col-md-3 well">
-                    <h4 class"resources-title">Employees</h4>
-                    <i class="fa fa-plus-circle" id="add-employee"></i>
-                    <input class="employee" id="employeeInput" name="employeeName" placeholder="Employee name">	        
-		        	<ul id="employee-list"><!-- Show List --></ul>
+                <div class="col-md-3">
+    	            <div class="employee-column">
+                        <h4 class"resources-title">Employees</h4>
+                        <i class="fa fa-plus-circle" id="add-employee"></i>
+                        <input class="employee" id="employeeInput" name="employeeName" placeholder="Employee name">	        
+    		        	<ul id="employee-list"><!-- Show List --></ul>
 
-	        		<!--<button type="button" id="random">Randomize</button>
-		        	<div id="selected-random">
-                    </div>-->
+    	        		<!--<button type="button" id="random">Randomize</button>
+    		        	<div id="selected-random">
+                        </div>-->
+                    </div>
                 </div>
                 <!-- End Employee Column -->
 
                 <!-- Task Column -->
                 <div class="col-md-9">
                     <div class="row">
-                        <div class="col-md-4 well">
-                            <span class="task-input">
+                    <div class="col-md-4">
+                        <div class="task-column">
+                            <span class="task-input1">
                                 <i class="fa fa-plus-circle"></i>
-                                <input class="task" id="taskInput" name="taskName" placeholder="Task">
+                                <input class="task" id="taskInput1" name="taskName" placeholder="Task">
                             </span>
                             <div id="task-list1"><!-- Show List --></div>
                             
                             <div id="task-column" class="dotted-task sortable"></div>
                         </div>
-                        <div class="col-md-4 well">
-                            <i class="fa fa-plus-circle"></i>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="task-column">
+                            <span class="task-input2">
+                                <i class="fa fa-plus-circle"></i>
+                                <input class="task" id="taskInput2" name="taskName" placeholder="Task">
+                            </span>
                             <div id="task-list2"><!-- Show List --></div>
                             <div class="dotted-task sortable"></div>
-                           <!--<input class="task" id="taskInput" name="taskName" placeholder="Task">-->
-                        </div>
-                        <div class="col-md-4 well">
-                            <i class="fa fa-plus-circle"></i>
-                            <div id="task-list3"><!-- Show List --></div>
-                            <div class="dotted-task sortable"></div>
-                           <!--<input class="task" id="taskInput" name="taskName" placeholder="Task">-->
                         </div>
                     </div>
-                              
-                        <!--<div id="task-list"></div>-->
+
+                    <div class="col-md-4">
+                        <div class="task-column">
+                            <span class="task-input3">
+                                <i class="fa fa-plus-circle"></i>
+                                <input class="task" id="taskInput3" name="taskName" placeholder="Task">
+                            </span>
+                            <div id="task-list3"><!-- Show List --></div>
+                            <div class="dotted-task sortable"></div>
+                        </div>
+                    </div>
                     
-                    <!--<button type="button" id="random">Randomize</button>
-                    <div id="selected-random">
-                    </div>-->
+                    </div>
                 </div>
                 <!-- End Employee Column -->
 		        	

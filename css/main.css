@@ -100,7 +100,10 @@ textarea {
 
 
 body {
-    
+    background: url(../img/bg.jpg) fixed center;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
 }
 
 #random {
@@ -136,6 +139,11 @@ body {
     margin-top: 0;
 }
 
+.employee-column {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    height: 500px;
+}
 
 .employee-box {
     list-style: none;
@@ -154,6 +162,12 @@ body {
 }
 
 /* Tasks */
+
+.task-column {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    height: 500px;
+}
 
 .dotted-task {
     border: dotted 1px #8e8e8e;
