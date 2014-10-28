@@ -1,9 +1,14 @@
+$(document).ready(function(){
+    $('.hints').slideDown(1000);
+});
+
 $(function(){
 	
 	// Show Employee Input //
 
 	$("#add-employee").click(function() {
 		$( "#employeeInput" ).show();
+		$( "#add-employee" ).hide();
 	});
 
 	// Employee Input //
@@ -18,8 +23,8 @@ $(function(){
 			$this.val('');
 			
 			// Draggable Employee Box //
-			$( "#employee-list" ).sortable();
-			$( "#task-column" ).droppable(); 
+			$( "#employee-list" ).children().draggable();
+			$( "#droppable" ).droppable(); 
 		  }
 		}
 
@@ -33,10 +38,12 @@ $(function(){
 
 		var newItem1 = ($this.val());
 		if (newItem1 !== "") {
-			$("div#task-list1").append($("<h2>").text(newItem1).addClass("task-item"));
+			$("div#task-list1").append($("<h3>").text(newItem1).addClass("task-item"));
 			$this.val('');
 			// Fade out input box after click //
 			$(".task-input1").fadeOut(700);
+			$(".step1").fadeOut(600);
+			$(".step2").fadeIn(600);
 		  }
 		}
 	});
@@ -49,7 +56,7 @@ $(function(){
 
 		var newItem1 = ($this.val());
 		if (newItem1 !== "") {
-			$("div#task-list2").append($("<h2>").text(newItem1).addClass("task-item"));
+			$("div#task-list2").append($("<h3>").text(newItem1).addClass("task-item"));
 			$this.val('');
 			// Fade out input box after click //
 			$(".task-input2").fadeOut(700);
@@ -65,7 +72,7 @@ $(function(){
 
 		var newItem1 = ($this.val());
 		if (newItem1 !== "") {
-			$("div#task-list3").append($("<h2>").text(newItem1).addClass("task-item"));
+			$("div#task-list3").append($("<h3>").text(newItem1).addClass("task-item"));
 			$this.val('');
 			// Fade out input box after click //
 			$(".task-input3").fadeOut(700);

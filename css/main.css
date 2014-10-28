@@ -106,11 +106,24 @@ body {
     -webkit-background-size: cover;
 }
 
-#random {
-    display: none;
-}
 
 /* header */
+
+.hints {
+    display: none;
+    background: black;
+    height: 80px;
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 20px;
+    color: grey;
+    text-align: center;
+    font-size: 34px;
+}
+
+.step2 {
+    display: none;
+}
 
 .main-title {
     text-align: center;
@@ -143,6 +156,7 @@ body {
     background: rgba(255, 255, 255, 0.7);
     padding: 10px;
     height: 500px;
+    margin-bottom: 20px;
 }
 
 .employee-box {
@@ -161,16 +175,24 @@ body {
     box-shadow: 4px 10px 5px 0px rgba(0,0,0,0.3);
 }
 
+.employee-list {
+    z-index: 9999;
+}
+
+.red {
+    background: red;
+}
+
 /* Tasks */
 
 .task-column {
     background: rgba(255, 255, 255, 0.7);
     padding: 10px;
     height: 500px;
+    margin-bottom: 20px;
 }
 
 .dotted-task {
-    border: dotted 1px #8e8e8e;
     margin: 10px;
     height: 40px;
 }
@@ -178,18 +200,6 @@ body {
 .task-item {
     text-align: center;
 }
-
-/* Mobile */
-
-@media (max-width: 600px) {
-  .main-title {
-    color: #9b7d61;
-    font-size: 18px;
-  }
-}
-
-
-
 
 
 
