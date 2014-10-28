@@ -119,8 +119,11 @@ body {
     width: 400px;
 }
 
-/* Resources */
+/* Employee */
 
+#employeeInput {
+    display: none;
+}
 
 .resource-container {
     margin-top: 20px;
@@ -134,13 +137,32 @@ body {
 }
 
 
-.resource-item {
+.employee-box {
     list-style: none;
     margin-left: -35px;
     padding: 10px;
     background: #ededed;
     border-radius: 8px;
     margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.employee-box:active {
+    -webkit-box-shadow: 4px 10px 5px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 4px 10px 5px 0px rgba(0,0,0,0.3);
+    box-shadow: 4px 10px 5px 0px rgba(0,0,0,0.3);
+}
+
+/* Tasks */
+
+.dotted-task {
+    border: dotted 1px #8e8e8e;
+    margin: 10px;
+    height: 40px;
+}
+
+.task-item {
+    text-align: center;
 }
 
 /* Mobile */
